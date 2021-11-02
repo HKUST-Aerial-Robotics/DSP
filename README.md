@@ -1,4 +1,4 @@
-# DSP
+# DSP: Trajectory Prediction with Graph-based Dual-scale Context Fusion
 
 ## Introduction
 This is the project page of the paper 
