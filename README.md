@@ -22,6 +22,13 @@ which is submitted to the *IEEE Robotics and Automation Letters (RA-L)*.
   </p>
 </a>
 
+**Supplementary Video (Argoverse Tracking dataset):**
+<a href="https://youtu.be/AifLEhVQXjo" target="_blank">
+  <p align="center">
+    <img src="files/vid2_cover.png" alt="video" width="640" height="360" border="10" />
+  </p>
+</a>
+
 ## Demo
 * Color scheme: green - predicted trajectories; red - observation & GT trajectories; orange - other agents.
 
