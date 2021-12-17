@@ -1,11 +1,9 @@
-# DSP: Trajectory Prediction with Graph-based Dual-scale Context Fusion
+# Trajectory Prediction with Graph-based Dual-scale Context Fusion
 
 ## Introduction
 This is the project page of the paper 
 
-* Lu Zhang, Peiliang Li, Jing Chen and Shaojie Shen, "Trajectory Prediction with Graph-based Dual-scale Context Fusion", 2021,
-
-which is submitted to the *IEEE Robotics and Automation Letters (RA-L)*.
+* Lu Zhang, Peiliang Li, Jing Chen and Shaojie Shen, "Trajectory Prediction with Graph-based Dual-scale Context Fusion", 2021.
 
 * Notice: The code will be released after the publishing of this paper.
 
@@ -13,6 +11,12 @@ which is submitted to the *IEEE Robotics and Automation Letters (RA-L)*.
 
 <p align="center">
   <img src="files/cover.png" width = "500"/>
+</p>
+
+**Quantitative Results:**
+
+<p align="center">
+  <img src="files/quant_res.png" width = "800"/>
 </p>
 
 **Video:**
