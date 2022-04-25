@@ -13,6 +13,36 @@ Lu Zhang, Peiliang Li, Jing Chen and Shaojie Shen, "Trajectory Prediction with G
   <img src="files/cover.png" width = "500"/>
 </p>
 
+## Have a try!
+
+### Install dependencies
+- Create a new conda env
+```
+conda create --name dsp python=3.8
+conda activate dsp
+```
+
+- Install PyTorch according to your CUDA version. For RTX 30 series, we recommend CUDA >= 11.1, PyTorch >= 1.8.0.
+```
+conda install pytorch==1.10.1 torchvision==0.11.2 torchaudio==0.10.1 cudatoolkit=11.3 -c pytorch -c conda-forge
+```
+
+- Install Argoverse API, please follow this [page](https://github.com/argoai/argoverse-api).
+
+- Install other dependencies
+```
+pip install scikit-image IPython tqdm ipdb tensorboard
+```
+
+- Install PyTorch Scatter, please refer to this [page](https://github.com/rusty1s/pytorch_scatter).
+
+
+### Play with pretrained models
+Download the pretrained model and preprocessed data samples.
+
+### Train from scratch
+
+
 **Quantitative Results:**
 
 <p align="center">
