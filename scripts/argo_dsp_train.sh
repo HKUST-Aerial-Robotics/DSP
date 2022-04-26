@@ -1,0 +1,15 @@
+CUDA_VISIBLE_DEVICES=0 python train.py \
+  --model dsp \
+  --loss dsp \
+  --clipping 2.0 \
+  --features_dir data_argo/features/ \
+  --obs_len 20 \
+  --pred_len 30 \
+  --train_batch_size 8 \
+  --val_batch_size 8 \
+  --val_interval 1 \
+  --train_epoches 30 \
+  --data_aug \
+  --use_cuda True \
+  --logger_writer False \
+  --adv_cfg_path config.dsp_cfg

@@ -283,18 +283,6 @@ class ArgoPreproc():
                     open_set[nbr_idx] = cost_new
                     open_set = {k: v for k, v in sorted(open_set.items(), key=lambda item: item[1])}  # sort by value
 
-            # print('open_set: ', open_set)
-            # _, ax = plt.subplots(figsize=(12, 12))
-            # ax.axis('equal')
-            # self.map_vis.show_surrounding_elements(ax, city_name, orig, show_lane_ids=True)
-            # self.map_vis.show_lanes(ax, city_name, [node[0] for node in child_nodes])
-
-            # self.map_vis.show_lanes(ax, city_name, closed_set, clr='r')
-            # for idx in closed_set:
-            #     pt = lanes[idx].centerline[int(lanes[idx].centerline.shape[0]/2)+1]
-            #     ax.text(pt[0], pt[1], 'p:{}, cost:{:.3f}'.format(node_list[idx][0], node_list[idx][1]))
-            # plt.show()
-
         # near in geometry
         nearby_tmp = self.argo_map.get_lane_ids_in_xy_bbox(orig[0], orig[1], city_name, self.COMPL_RANGE)
         nearby_ids = []
@@ -306,15 +294,6 @@ class ArgoPreproc():
         selected_lane_ids = copy.deepcopy(list(node_list.keys()))  # return all visited lanes
         selected_lane_ids += nearby_ids
         selected_lane_ids = list(set(selected_lane_ids))
-
-        # _, ax = plt.subplots(figsize=(12, 12))
-        # ax.axis('equal')
-        # for idx in list(node_list.keys()):
-        #     pt = lanes[idx].centerline[int(lanes[idx].centerline.shape[0]/2)+1]
-        #     ax.text(pt[0], pt[1], 'p:{}, cost:{:.3f}'.format(node_list[idx][0], node_list[idx][1]))
-        # self.map_vis.show_lanes(ax, city_name, list(node_list.keys()))
-        # self.map_vis.show_surrounding_elements(ax, city_name, orig, show_lane_ids=False)
-        # plt.show()
 
         return copy.deepcopy(selected_lane_ids)
 
@@ -365,7 +344,7 @@ class ArgoPreproc():
         pts = np.stack((x.flatten(), y.flatten()), axis=1)
 
         # Driveable area
-        idcs_da = self.argo_map.get_raster_layer_points_boolean(pts, city_name, 'roi')  # np.ndarray, Boolean
+        idcs_da = self.argo_map.get_raster_layer_points_boolean(pts, city_name, 'driveable_area')  # np.ndarray, Boolean
 
         # lane ROI
         lane_polygon = unary_union([
@@ -384,16 +363,6 @@ class ArgoPreproc():
 
         idcs_da = np.logical_and(idcs_da, idcs_roi)
         pts_da = pts[idcs_da]
-
-        # _, ax = plt.subplots()
-        # ax.axis('equal')
-        # px, py = lane_polygon.exterior.coords.xy
-        # ax.plot(px, py, color='r')
-        # for ring in lane_polygon.interiors:
-        #     xy = np.array(list(ring.coords))
-        #     ax.plot(xy[:, 0], xy[:, 1], color='g')
-        # ax.scatter(pts_da[:, 0], pts_da[:, 1], alpha=0.5, color='deepskyblue', marker='.')
-        # plt.show()
 
         # ~ get graph topology
         ids = np.full(len(pts), -1)
