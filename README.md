@@ -5,7 +5,6 @@ This is the project page of the paper
 ```
 Lu Zhang, Peiliang Li, Jing Chen and Shaojie Shen, "Trajectory Prediction with Graph-based Dual-scale Context Fusion", 2021.
 ```
-* Notice: The code will be released after the publishing of this paper.
 
 **Preprint:** [Link](https://arxiv.org/abs/2111.01592)
 
