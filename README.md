@@ -77,7 +77,11 @@ Download the pretrained model ([Google](https://drive.google.com/file/d/1Qi6mq1z
 ```
 bash scripts/argo_dsp_vis.sh
 ```
-
+Since we store each sequence as a single file, the system may raise error `OSError: [Erron 24] Too many open files` during evaluation and training. You may use the command below to solve this issue:
+```
+ulimit -SHn 51200
+ulimit -s unlimited
+```
 
 ### Train from scratch
 
