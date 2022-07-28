@@ -16,7 +16,7 @@ import pickle as pkl
 #
 from argo_preprocess import ArgoPreproc
 
-_FEATURES_SMALL_SIZE = 1000
+_FEATURES_SMALL_SIZE = 1024
 
 
 def parse_arguments() -> Any:

@@ -20,8 +20,6 @@ from argoverse.map_representation.map_api import ArgoverseMap
 import init_path
 from utils.vis_utils import ArgoMapVisualizer
 
-_FEATURES_SMALL_SIZE = 1000
-
 
 class ArgoPreproc():
     def __init__(self, args, verbose=False):
@@ -32,11 +30,7 @@ class ArgoPreproc():
         self.mode = args.mode
 
         self.MIN_OBS_FRAMES = 10
-        self.MAP_RADIUS = 100.0
-        self.STEP_DT = 0.1
-        self.BASE_EXT_DIST = 30.0
-        self.MIN_EXT_DIST = 80.0
-        self.MAX_EXT_ACC = 4.0
+        self.MAP_RADIUS = 120.0
         self.COMPL_RANGE = 30.0
         ''' DA: drivable area '''
         self.DA_RESOLUTION = 1.0
@@ -71,13 +65,6 @@ class ArgoPreproc():
         trajs_obs = trajs[:, :self.args.obs_len]
         ts_obs = ts[:self.args.obs_len]
 
-        # dist = trajs_obs[0][1:] - trajs_obs[0][:-1]
-        # dist = np.sum(np.sqrt(np.sum(np.abs(dist)**2, axis=-1)))
-        # avg_vel = dist / (ts_obs[-1] - ts_obs[0]) * 2.0
-        # t_pred = self.args.pred_len * self.STEP_DT
-        # expand_dist = self.BASE_EXT_DIST + (avg_vel * t_pred + 0.5 * self.MAX_EXT_ACC * t_pred**2)
-        # expand_dist = np.min([np.max([expand_dist, self.MIN_EXT_DIST]), self.MAP_RADIUS])
-        # print('avg_vel: ', avg_vel, ', expand_dist: ', expand_dist)
         lane_ids = self.get_related_lanes(seq_id, city_name, orig, expand_dist=self.MAP_RADIUS)
 
         # get multi-layer graph

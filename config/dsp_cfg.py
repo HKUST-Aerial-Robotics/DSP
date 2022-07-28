@@ -22,7 +22,6 @@ class AdvCfg():
         net_cfg["actor2actor_dist"] = 100.0
 
         net_cfg["n_mode"] = 6
-        net_cfg["r_supress"] = 2.8
 
         net_cfg["p_dropout"] = 0.1
 
