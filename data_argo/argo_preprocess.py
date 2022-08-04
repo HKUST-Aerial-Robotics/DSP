@@ -40,7 +40,7 @@ class ArgoPreproc():
         self.LS_NUM_SCALES = 6
         self.LS_CROSS_DIST = 6.0
 
-        self.DALS_DIST_THRES = 2.5
+        self.DALS_DIST_THRES = 2.25
 
         self.argo_map = ArgoverseMap()
 
