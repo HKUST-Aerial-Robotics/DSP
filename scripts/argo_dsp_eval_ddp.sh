@@ -8,4 +8,4 @@ CUDA_VISIBLE_DEVICES="0,1,2,3,4,5,6,7" python -m torch.distributed.launch --npro
   --val_batch_size 64 \
   --use_cuda True \
   --adv_cfg_path config.dsp_cfg \
-  --model_path saved_models/ckpt_dsp_epoch27.tar
+  --model_path saved_models/ckpt_dsp_220804.tar

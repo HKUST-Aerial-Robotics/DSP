@@ -7,7 +7,7 @@ CUDA_VISIBLE_DEVICES="0,1,2,3,4,5,6,7" python -m torch.distributed.launch --npro
   --train_batch_size 16 \
   --val_batch_size 16 \
   --val_interval 2 \
-  --train_epoches 45 \
+  --train_epoches 40 \
   --data_aug \
   --use_cuda True \
   --logger_writer True \

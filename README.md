@@ -73,7 +73,7 @@ Generate a subset of the dataset for testing using the script (it will generate 
 ```
 bash scripts/argo_preproc_small.sh
 ```
-Download the pretrained model ([Google](https://drive.google.com/file/d/1Qi6mq1zXLpNfxg4slltN-2qJHIQ0szCP/view?usp=sharing)) ([Baidu](https://pan.baidu.com/s/1c-rj1n0WcE_v0_tWAhk2Pg), code: tmnz). Move the pretrained model to `./saved_models/`, then use the scripts below to get prediction results:
+Download the pretrained model ([Google](https://drive.google.com/file/d/1L6VeVSNpDbmaCisiw1fUU-eAc0u1huP-/view?usp=sharing)) ([Baidu](https://pan.baidu.com/s/19NKNRWLnvmyaGKjKeKBVEw), code: cemi). Move the pretrained model to `./saved_models/`, then use the scripts below to get prediction results:
 ```
 bash scripts/argo_dsp_vis.sh
 ```

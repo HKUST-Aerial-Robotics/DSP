@@ -7,4 +7,4 @@ CUDA_VISIBLE_DEVICES=0 python evaluation.py \
   --val_batch_size 32 \
   --use_cuda True \
   --adv_cfg_path config.dsp_cfg \
-  --model_path saved_models/ckpt_dsp_epoch27.tar
+  --model_path saved_models/ckpt_dsp_220804.tar
