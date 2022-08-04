@@ -1,6 +1,9 @@
 # Trajectory Prediction with Graph-based Dual-scale Context Fusion
 
 ## Introduction
+(**Update** Aug 4 2022)
+* Add (DDP-based) multi-card training/evaluation/submission code.
+* Fix some parameters, update links to the pretrained model.
 
 (**NEW**) This paper is accepted for publication in the Proceedings of the *2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2022)*.
 
@@ -12,7 +15,7 @@ Lu Zhang, Peiliang Li, Jing Chen and Shaojie Shen, "Trajectory Prediction with G
 **Preprint:** [Link](https://arxiv.org/abs/2111.01592)
 
 <p align="center">
-  <img src="files/cover.png" width = "500"/>
+  <img src="files/cover.jpg" width = "500"/>
 </p>
 
 **Quantitative Results:**
