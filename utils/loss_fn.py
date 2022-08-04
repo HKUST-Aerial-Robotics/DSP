@@ -56,10 +56,10 @@ class LossFn(nn.Module):
         _traj_fut = torch.stack([traj_fut for _ in range(traj_pred.shape[1])], dim=1)
 
         loss_reg = reg_nll_loss(traj_pred, _traj_fut)
-        # _, min_idcs = loss_reg.min(1)
-        # row_idcs = torch.arange(len(min_idcs)).long().to(self.device)
-        # # traj reg
-        # loss_reg = loss_reg[row_idcs, min_idcs]  # batch x fut x 2
+        _, min_idcs = loss_reg.min(1)
+        row_idcs = torch.arange(len(min_idcs)).long().to(self.device)
+        # traj reg
+        loss_reg = loss_reg[row_idcs, min_idcs]  # batch x fut x 2
         return torch.mean(loss_reg)
 
     def calc_wta_goal_reg_loss(self, goal_pred, goal_gt):
