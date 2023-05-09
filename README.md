@@ -24,14 +24,14 @@ Lu Zhang, Peiliang Li, Jing Chen and Shaojie Shen, "Trajectory Prediction with G
   <img src="files/quant_res.png" width = "800"/>
 </p>
 
-**Video:**
+**Video:** [link](https://youtu.be/AifLEhVQXjo)
 <a href="https://youtu.be/AifLEhVQXjo" target="_blank">
   <p align="center">
     <img src="files/video_cover.png" alt="video" width="640" height="360" border="10" />
   </p>
 </a>
 
-**Supplementary Video (Argoverse Tracking dataset):**
+**Supplementary Video (Argoverse Tracking dataset):** [link](https://youtu.be/Rjk2u9O59R4)
 <a href="https://youtu.be/Rjk2u9O59R4" target="_blank">
   <p align="center">
     <img src="files/vid2_cover.png" alt="video" width="640" height="360" border="10" />
